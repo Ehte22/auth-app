@@ -52,7 +52,7 @@ export const signIn = asyncHandler(async (req: Request, res: Response): Promise<
 
     const token = generateToken({ userId: result._id, role: result.role })
 
-    res.cookie("user", token, { maxAge: 864000000, httpOnly: true, secure: process.env.NODE_ENV === "development", sameSite: "none" })
+    res.cookie("user", token, { maxAge: 864000000, httpOnly: true, secure: true, sameSite: "none" })
 
     res.status(200).json({
         message: "User Login Success", result: {
