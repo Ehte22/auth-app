@@ -3,7 +3,7 @@ import { IUser } from "../../models/user.interface"
 
 export const authApi = createApi({
     reducerPath: "authApi",
-    baseQuery: fetchBaseQuery({ baseUrl: `${process.env.BASE_URL}/api/v1/auth`, credentials: "include" }),
+    baseQuery: fetchBaseQuery({ baseUrl: `https://auth-app-one-nu.vercel.app/api/v1/auth`, credentials: "include" }),
     tagTypes: ["auth"],
     endpoints: (builder) => {
         return {
