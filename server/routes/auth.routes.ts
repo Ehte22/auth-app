@@ -8,6 +8,6 @@ AUTH_ROUTER
     .post("/sign-up", authController.signUp)
     .post("/sign-in", authController.signIn)
     .post("/sign-out", authController.signOut)
-    .get("/get-users", protectedRoute, restrict("admin"), authController.getAllUsers)
+    .get("/get-users", protectedRoute, authController.getAllUsers)
 
 export default AUTH_ROUTER
