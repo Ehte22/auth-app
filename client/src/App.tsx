@@ -1,5 +1,4 @@
 import React from 'react'
-
 import './index.scss'
 import { Outlet, Route, Routes } from 'react-router-dom'
 import Login from './pages/Login'
