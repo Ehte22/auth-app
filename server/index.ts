@@ -13,7 +13,13 @@ const app = express();
 app.use(express.json());
 app.use(cors({
     // origin: "https://e-com-main-app.vercel.app",
-    origin: true,
+    origin: [
+        "https://e-com-main-app.vercel.app",
+        "https://e-com-product-app.vercel.app",
+        "https://ecom-auth-app-client.vercel.app",
+        "https://ecom-cart-app-client.vercel.app",
+        "https://ecom-order-app-client.vercel.app",
+    ],
     credentials: true
 }));
 app.use(cookieParser());
