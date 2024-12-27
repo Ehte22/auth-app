@@ -7,4 +7,5 @@ export interface IUser {
     profile?: File | string
     role?: string
     username?: string
+    token?: string
 }
