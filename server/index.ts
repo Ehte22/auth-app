@@ -12,7 +12,8 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-    origin: "https://e-com-main-app.vercel.app",
+    // origin: "https://e-com-main-app.vercel.app",
+    origin: true,
     credentials: true
 }));
 app.use(cookieParser());
@@ -25,7 +26,7 @@ app.use("*", (req: Request, res: Response) => {
 
 // Error Middleware
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
-    res.status(500).json({ message: "Something went wrong", error: err });
+    res.status(500).json({ message: "Something went wrong", error: err.message });
 });
 
 // Initialize MongoDB

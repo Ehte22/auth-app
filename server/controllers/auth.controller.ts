@@ -56,7 +56,6 @@ export const signIn = asyncHandler(async (req: Request, res: Response): Promise<
         maxAge: 864000000,
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
-        domain: "https://e-com-main-app.vercel.app",
         sameSite: "none"
     })
 
