@@ -52,7 +52,13 @@ export const signIn = asyncHandler(async (req: Request, res: Response): Promise<
 
     const token = generateToken({ userId: result._id, role: result.role })
 
-    res.cookie("user", token, { maxAge: 864000000, httpOnly: true, secure: process.env.NODE_ENV === 'production', sameSite: "none" })
+    res.cookie("user", token, {
+        maxAge: 864000000,
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        domain: "https://e-com-main-app.vercel.app",
+        sameSite: "none"
+    })
 
     res.status(200).json({
         message: "User Login Success", result: {
