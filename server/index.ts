@@ -19,7 +19,9 @@ app.use(cors({
         "https://ecom-auth-app-client.vercel.app",
         "https://ecom-cart-app-client.vercel.app",
         "https://ecom-order-app-client.vercel.app",
+        "https://ecom-admin-app-six.vercel.app"
     ],
+
     credentials: true
 }));
 app.use(cookieParser());
